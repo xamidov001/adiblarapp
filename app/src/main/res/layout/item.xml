@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E5E5E5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/big_card"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.87"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_height="@dimen/_180sdp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/image"
+                app:layout_constraintHeight_percent="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:maxLines="2"
+                android:textColor="#303236"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="O`tkir Hoshimov"
+                android:textSize="@dimen/_18ssp"
+                android:id="@+id/name_writers"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                android:maxWidth="@dimen/_70sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/saved_card"
+                app:cardBackgroundColor="#E5E5E5"
+                app:layout_constraintTop_toTopOf="@id/name_writers"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/name_writers"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:focusable="true"
+                android:clickable="true"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_height="@dimen/_20sdp">
+                <ImageView
+                    android:src="@drawable/ic_saved_1"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:text="(1956 - 2015)"
+                android:id="@+id/life_txt"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toBottomOf="@id/name_writers"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.CubeGrid"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

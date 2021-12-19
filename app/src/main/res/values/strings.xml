@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adiblar App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uzbekistan">Mumtoz adabiyoti</string>
+    <string name="russia">O`zbek adabiyoti</string>
+    <string name="england">Jahon adabiyoti</string>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E5E5E5"
+    android:orientation="vertical"
+    tools:context=".fragments.AddFragment">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:maxWidth="@dimen/_230sdp"
+        android:text="Adib qo`shish"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:textColor="#303236"
+        android:textSize="@dimen/_25ssp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_150sdp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/set_image"
+                android:layout_gravity="center"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardBackgroundColor="#00B238"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp">
+                <TextView
+                    android:text="Adib rasmi"
+                    android:gravity="center"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxStrokeColor="#00B238"
+                app:hintTextColor="#00B238"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:hint="Name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="?actionBarSize">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxStrokeColor="#00B238"
+                app:hintTextColor="#00B238"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:hint="Tug`ilgan yili"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="?actionBarSize">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/born_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxStrokeColor="#00B238"
+                app:hintTextColor="#00B238"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:hint="Vafot etgan yili"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="?actionBarSize">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/death_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:background="@drawable/background_spinner"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15ssp"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+                <Spinner
+                    android:spinnerMode="dropdown"
+                    style="@style/SpinnerTheme"
+                    android:entries="@array/my_array"
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </Spinner>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxStrokeColor="#00B238"
+                app:hintTextColor="#00B238"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:hint="Adib haqida tulia ma`lumot"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="@dimen/_150sdp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/about_edt"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:id="@+id/save_btn"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_20sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardBackgroundColor="#00B238"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp">
+                <TextView
+                    android:text="Saqlash"
+                    android:gravity="center"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

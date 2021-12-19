@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".fragments.WritersFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorOnPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:maxWidth="@dimen/_230sdp"
+                    android:text="Adiblar xayoti va ijodi"
+                    android:textColor="#303236"
+                    android:textSize="@dimen/_25ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_search"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    app:cardCornerRadius="@dimen/_18sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_search" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                app:tabIndicatorGravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:tabIndicator="@drawable/background_indicator"
+                app:tabIndicatorColor="#00B238"
+                app:tabIndicatorHeight="@dimen/_30sdp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

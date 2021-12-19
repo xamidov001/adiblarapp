@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#E5E5E5"
+    tools:context=".fragments.SearchFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginVertical="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item" />
+
+</LinearLayout>
